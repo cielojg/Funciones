@@ -1,32 +1,31 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+Z
+%d > 90
+%C => Z
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+voif funA (char num) {
 
-# Precompiled Headers
-*.gch
-*.pch
+if (num  <´z´>
+funB (num);
+}
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+void funB (char num) {
+funA (++num);
+}
+// num = ´A´
+// funA (++A) ;  => funA (++64) = funA (65) => funA (´B´);
+// num = ´B´;
+// funA (++B); => funA(++65) => funA(66) => funA (´C´);
 
-# Fortran module files
-*.mod
-*.smod
+//...
+//...
+// num = ´Z´;
+// funA(++Z); => funA(++90) => funA(100) => funA(´Z´);
+funA(++num);
+}
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+int ain (void)) {
+funA (´A´);
+return 0;
+}
 
-# Executables
-*.exe
-*.out
-*.app
