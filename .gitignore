@@ -1,31 +1,75 @@
+
 #include <stdio.h>
-Z
-%d > 90
-%C => Z
 
-voif funA (char num) {
+double factorial(double x);
 
-if (num  <´z´>
-funB (num);
+int main(){
+	
+	double numero, calculo;
+	int condicion;
+	
+	do{
+	
+		//Ingresamos el número, para obtener el factorial.
+		
+		printf("\n\nIngrese un numero: ");
+		scanf("%lf", &numero);
+		
+		
+		//Si el número es mayor a 0, se hará el cálculo del factorial. 
+		if(numero > 0){
+		
+			
+			calculo = factorial (numero);
+			
+			printf("El factorial del numero %.0lf es de: %.0lf ", numero, calculo);
+			
+			
+		}
+		
+		// si es negativo, mostrar el sig mensaje,
+		//hasta mostrar uno positivo.
+		else{
+			
+			do{
+					
+				printf("\Opción incorrecta, vuelva a intentar, por favor\n");
+        printf("\Ingrese un numero positivo: ");        
+      
+				scanf("%lf", &numero);
+			
+				calculo = factorial (numero);
+				printf("El factorial del numero %.0lf es de: %.0lf ", numero, calculo);
+				
+			}while(numero < 0);	//
+						
+		}
+		
+			//Si ingresamos el número 1, volverá a lo mismo.
+			//Poner 0 para salir
+			
+			printf("\Desea realizar otro calculo [Si=1][No=0]: ");
+			scanf("%d", &condicion);
+		
+	}while(condicion != 0); 
+		
+	//Para termina, aparece este mensaje.
+		
+	printf("\Regresa pronto, gracias \n");
+	
+	return 0;
 }
 
-void funB (char num) {
-funA (++num);
+double factorial(double x){
+	
+	if(x == 0 || x == 1){
+		
+		return 1;
+	}
+	
+	else{
+		
+		return x * factorial (x - 1);
+	}
+	
 }
-// num = ´A´
-// funA (++A) ;  => funA (++64) = funA (65) => funA (´B´);
-// num = ´B´;
-// funA (++B); => funA(++65) => funA(66) => funA (´C´);
-
-//...
-//...
-// num = ´Z´;
-// funA(++Z); => funA(++90) => funA(100) => funA(´Z´);
-funA(++num);
-}
-
-int ain (void)) {
-funA (´A´);
-return 0;
-}
-
